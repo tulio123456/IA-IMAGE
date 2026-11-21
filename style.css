@@ -1,0 +1,26 @@
+
+:root{color-scheme:dark;--bg:#171a28;--ink:#f6f2ff;--muted:#bdb7d3;--line:#4a4463;--accent:#ffd382;font:17px "Segoe UI",sans-serif}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink)}
+header,main{width:min(1180px,calc(100% - 36px));margin:auto}
+header{padding:34px 0 24px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:end;gap:14px;flex-wrap:wrap}
+h1,h2,p{margin:0}h1{font:clamp(2.4rem,6vw,4.3rem)/1 Georgia,serif;letter-spacing:-.06em}
+h2{font:1.45rem Georgia,serif}
+header p{color:var(--muted);margin-top:12px}
+main{display:grid;grid-template-columns:minmax(0,370px) minmax(0,1fr);gap:42px;padding:26px 0 50px}
+form,section{min-width:0}
+label{display:block;margin-top:16px;font-weight:600}textarea,select,input{display:block;margin-top:7px;width:100%;font:inherit;padding:10px;border-radius:7px;color:var(--ink);background:#212436;border:1px solid var(--line)}
+textarea{resize:vertical;min-height:5rem}#prompt{min-height:7rem}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+button,.download{font:inherit;font-weight:650;padding:10px 15px;border:1px solid var(--line);border-radius:7px;background:#29263b;color:var(--ink);cursor:pointer;text-decoration:none}
+.primary{background:var(--accent);color:#211a17;border-color:transparent;width:100%;margin-top:20px}
+button:disabled{opacity:.5;cursor:default}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+#engine{color:var(--accent);font-size:.88rem;margin-top:10px;min-height:2.5em;overflow-wrap:anywhere}
+.stage{margin-top:14px;min-height:510px;display:grid;place-items:center;text-align:center;padding:22px;border:1px solid var(--line);background:radial-gradient(#4d4568 1px,transparent 1px) 0 0/19px 19px,#201f32;border-radius:12px}
+.stage p{background:#201f32;padding:8px 12px;color:var(--muted)}
+.stage img{max-width:100%;max-height:70vh;border-radius:4px}
+.result{margin-top:16px;display:flex;gap:15px;align-items:center;flex-wrap:wrap}
+[hidden]{display:none!important}
+@media(max-width:760px){main{grid-template-columns:1fr;gap:24px}.stage{min-height:300px}}
+
